@@ -1,0 +1,28 @@
+.wd-status,
+.wd-status * {
+  border-radius: 2px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-status {
+  margin-left: 10px;
+}
+
+.wd-status > li {
+  background-color: lightgray;
+  padding: 10px;
+  margin: 5px;
+}
+
+.wd-status > li > a {
+  padding: 6px;
+  text-decoration: none;
+  color: black;
+}
+
+.wd-calendar {
+  text-decoration: none;
+  color: red;
+}
+
