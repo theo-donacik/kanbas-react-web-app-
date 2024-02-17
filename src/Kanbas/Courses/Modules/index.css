@@ -1,0 +1,50 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 20px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.wd-button-row {
+  padding: 10px;
+}
+
+.wd-button {
+  background-color: rgb(231, 228, 228);
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: black;
+  padding: 5px;
+  margin:5px;
+}
+
+.wd-button.add {
+  background-color: red;
+  color: white;
+}
