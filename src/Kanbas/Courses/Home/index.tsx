@@ -14,7 +14,7 @@ function Home() {
   return (
     <div className="d-flex">
       <ModuleList />
-      <div className="flex-grow-0 me-2 d-none d-lg-block">
+      <div className=" me-2 d-none d-lg-block">
         <ul className="list-group wd-status">
           {buttons.map((item, index) => (
             <li className="list-group-item wd-entry">

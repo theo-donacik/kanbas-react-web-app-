@@ -20,11 +20,9 @@ function Courses() {
         {' > '}
         {pathList.slice(4).join(">")} 
       </h1>
-      <CourseNavigation />
-      <div>
-        <div
-          className="overflow-y-scroll position-fixed bottom-0 end-0"
-          style={{ left: "320px", top: "50px" }} >
+      <div className="d-flex">
+        <CourseNavigation />
+        <div>
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home/>} />
