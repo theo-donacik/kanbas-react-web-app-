@@ -7,9 +7,9 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 
-function Courses() {
+function Courses({ courses } : any) {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const course = courses.find((course : any) => course._id === courseId);
   const location = useLocation()
   const pathList = location.pathname.split('/')
 
