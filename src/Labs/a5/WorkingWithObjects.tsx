@@ -62,7 +62,7 @@ function WorkingWithObjects() {
       </a>
 
       <h4>Modifying Properties</h4>
-      <a href={`${ASSIGNMENT_URL}/title/${assignment.title}`}>
+      <a className="btn btn-primary" href={`${ASSIGNMENT_URL}/title/${assignment.title}`}>
         Update Title
       </a>
       <input type="text" 
@@ -71,7 +71,7 @@ function WorkingWithObjects() {
         value={assignment.title}/>
       <br/>
 
-      <a href={`${ASSIGNMENT_URL}/score/${assignment.score}`}>
+      <a className="btn btn-primary" href={`${ASSIGNMENT_URL}/score/${assignment.score}`}>
         Update Score
       </a>
       <input type="number" 
@@ -80,7 +80,7 @@ function WorkingWithObjects() {
         value={assignment.score}/>
       <br/>
 
-      <a href={`${ASSIGNMENT_URL}/completed/${assignment.completed}`}>
+      <a className="btn btn-primary" href={`${ASSIGNMENT_URL}/completed/${assignment.completed}`}>
         Update Completed
       </a>
       <input type="checkbox" 
@@ -89,7 +89,7 @@ function WorkingWithObjects() {
             checked={assignment.completed}/>
       <br/>
 
-      <a href={`${API_BASE}/a5/module/name/${myModule.name}`}>
+      <a className="btn btn-primary" href={`${API_BASE}/a5/module/name/${myModule.name}`}>
         Update Name 
       </a>
       <input type="text" 
@@ -97,7 +97,7 @@ function WorkingWithObjects() {
             name: e.target.value })}
         value={myModule.name}/>
       <br/>
-      <a href={`${API_BASE}/a5/module/description/${myModule.description}`}>
+      <a className="btn btn-primary" href={`${API_BASE}/a5/module/description/${myModule.description}`}>
         Update Description
       </a>
       <input type="text" 
