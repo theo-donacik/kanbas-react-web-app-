@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const API_BASE = process.env.REACT_APP_API_BASE;
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

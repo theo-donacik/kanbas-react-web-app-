@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { courses } from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
@@ -9,9 +11,20 @@ import Assignments from "./Assignments";
 
 function Courses({ courses } : any) {
   const { courseId } = useParams();
-  const course = courses.find((course : any) => course._id === courseId);
+  const COURSES_API = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(
+      `${COURSES_API}/${courseId}`
+    );
+    setCourse(response.data);
+  };
   const location = useLocation()
   const pathList = location.pathname.split('/')
+
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
 
   return (
     <div>
