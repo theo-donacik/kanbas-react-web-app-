@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function WorkingWithObjects() {
   const [assignment, setAssignment] = useState({
     id: 1, title: "NodeJS Assignment",
@@ -12,7 +15,7 @@ function WorkingWithObjects() {
     course: "My Course"
   });
 
-  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment"
+  const ASSIGNMENT_URL = `${API_BASE}/a5/assignment`
   const fetchAssignment = async () => {
     const response = await axios.get(`${ASSIGNMENT_URL}`);
     setAssignment(response.data);
@@ -40,20 +43,20 @@ function WorkingWithObjects() {
         Fetch Assignment
       </button>
       <h4>Retrieving Objects</h4>
-      <a href="http://localhost:4000/a5/assignment"
+      <a href={`${API_BASE}/a5/assignment`}
       className="btn btn-primary">
         Get Assignment
       </a>
-      <a href="http://localhost:4000/a5/module"
+      <a href={`${API_BASE}/a5/module`}
       className="btn btn-primary">
         Get Module
       </a>
       <h4>Retrieving Properties</h4>
-      <a href="http://localhost:4000/a5/assignment/title"
+      <a href={`${API_BASE}/a5/assignment/title`}
       className="btn btn-primary">
         Get Title
       </a>
-      <a href="http://localhost:4000/a5/module/name"
+      <a href={`${API_BASE}/a5/module/name`}
       className="btn btn-primary">
         Get Name
       </a>
@@ -86,7 +89,7 @@ function WorkingWithObjects() {
             checked={assignment.completed}/>
       <br/>
 
-      <a href={`http://localhost:4000/a5/module/name/${myModule.name}`}>
+      <a href={`${API_BASE}/a5/module/name/${myModule.name}`}>
         Update Name 
       </a>
       <input type="text" 
@@ -94,7 +97,7 @@ function WorkingWithObjects() {
             name: e.target.value })}
         value={myModule.name}/>
       <br/>
-      <a href={`http://localhost:4000/a5/module/description/${myModule.description}`}>
+      <a href={`${API_BASE}/a5/module/description/${myModule.description}`}>
         Update Description
       </a>
       <input type="text" 

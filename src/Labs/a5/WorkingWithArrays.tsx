@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function WorkingWithArrays() {
   const [todo, setTodo] = useState({
     id: 1,
@@ -47,7 +49,7 @@ function WorkingWithArrays() {
     setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
   };
 
-  const API = "http://localhost:4000/a5/todos";
+  const API = `${API_BASE}/a5/todos`;
   return (
     <div>
       <h3>Working with Arrays</h3>
