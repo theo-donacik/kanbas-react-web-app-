@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
-import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
@@ -13,7 +12,6 @@ import {
 } from "./modulesReducer";
 import { KanbasState } from "../../store";
 import * as client from "./client";
-
 
 function ModuleList() {
   const { courseId } = useParams();
@@ -98,7 +96,7 @@ function ModuleList() {
               </button>
               <button
                 className="wd-button"
-                onClick={() => handleDeleteModule(module._id)}>
+                onClick={() => handleDeleteModule(module.id)}>
                 Delete
               </button>
 
@@ -108,7 +106,7 @@ function ModuleList() {
                 <FaEllipsisV className="ms-2" />
               </span>
             </div>
-            {selectedModule && selectedModule._id === module._id && (
+            {selectedModule && selectedModule.id === module.id && (
               <ul className="list-group">
                 {module.lessons?.map((lesson:any) => (
                   <li className="list-group-item">
